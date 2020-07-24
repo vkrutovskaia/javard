@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.IOException;
-
+//first version of xml <-> json mapper, using jackson library
 public class XmlToJson {
     public static void main(String[] args) throws IOException {
 
@@ -75,7 +75,7 @@ public class XmlToJson {
         JsonNode node = xmlMapper.readTree(xml.getBytes());
 
         ObjectMapper jsonMapper = new ObjectMapper();
-        String json = jsonMapper.writeValueAsString(node);
+        String json = jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(node);
 
         System.out.println("Json from XML: " + json);
     }
