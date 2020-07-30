@@ -1,3 +1,2 @@
 # javard
-Java Izhevsk RD lab tasks
-Fo Jenkins triggering test
+For Jenkins triggering test
